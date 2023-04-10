@@ -32,7 +32,7 @@ Esse comando vai fazer com que o projeto seja compilado.
 Após fazer a compilação do projeto para fazer a execução basta fazer o seguinte comando
 
 ```
-java -jar target/CRUD-Attornatus-0.0.1-SNAPSHOT.jar
+mvn spring-boot:run -Dspring.profiles.active=dev
 ```
 
 Com isso, o projeto estara rodando na máquina local para testar a API
