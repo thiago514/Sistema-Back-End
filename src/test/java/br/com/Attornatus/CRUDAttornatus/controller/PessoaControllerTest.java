@@ -69,11 +69,11 @@ public class PessoaControllerTest {
         assertThat(response.getStatus()).isEqualTo(HttpStatus.CREATED.value());
 
         var jsonEsperado = this.pessoaDTO.write(
-                new PessoaDTO(2L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())
+                new PessoaDTO(3L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())
         ).getJson();
         assertThat(response.getContentAsString()).isEqualTo(jsonEsperado);
 
-        mvc.perform(delete("/pessoa/2")).andReturn().getResponse();
+        mvc.perform(delete("/pessoa/3")).andReturn().getResponse();
     }
 
     @Test
