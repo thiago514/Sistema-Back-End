@@ -2,7 +2,7 @@
 
 Para desenvolver o Software atendendo todas as demandas do usuário resolvi fazer a analise dos requisitos fazendo os diagramas de caso de uso e os diagramas de classe além da descrição de cenários servindo como documentação e orientação na produção do software
 
-![Untitled](Aprofundamento%20nos%20Requisitos(diagramas%20UML)%20314f3c361a8f4ec49d394427b2af1baa/Untitled.png)
+![Diagrama de Caso de Uso](https://github.com/thiago514/Teste-Tecnico-Back-End---Attornatus/blob/main/Analise_de_requisitos/AnaliseDeRequisitos/Aprofundamento%20nos%20Requisitos(diagramas%20UML)%20/DiagramaDeCasoDeUso.png)
 
 | Número do Caso de Uso | UC001                                                                                                                                                                                                                |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -126,4 +126,4 @@ Para desenvolver o Software atendendo todas as demandas do usuário resolvi faze
 | Includes | UC008 - Verifica se o Endereço Existe |
 | extends | Não há. |
 
-![Untitled](Aprofundamento%20nos%20Requisitos(diagramas%20UML)%20314f3c361a8f4ec49d394427b2af1baa/Untitled%201.png)
+![Diagrama de Classes](https://github.com/thiago514/Teste-Tecnico-Back-End---Attornatus/blob/main/Analise_de_requisitos/AnaliseDeRequisitos/Aprofundamento%20nos%20Requisitos(diagramas%20UML)%20/DiagramaDeClasse.png)

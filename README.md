@@ -5,7 +5,7 @@ Esse projeto foi feito para fazer o gerenciamento de Pessoas e de seus endereço
 
 ## 💬 Analise de Requisitos
 
-caso tenha interesse de ver como foi feita a analise de requisitos para fazer o projeto **[click aqui](https://github.com/thiago514/Teste-Tecnico-Back-End---Attornatus/blob/main/Analise_de_requisitos.md)**
+caso tenha interesse de ver como foi feita a analise de requisitos para fazer o projeto **[click aqui](https://github.com/thiago514/Teste-Tecnico-Back-End---Attornatus/blob/main/Analise_de_requisitos/AnaliseDeRequisitos.md)**
 
 ## 🚀 Começando
 
@@ -53,7 +53,7 @@ Para quendo estiver rodando na maquina local vai ser o seguinte link
 ```
 http://localhost:8080/
 ```
-Caso você queira ver alguns exemplos de JSON para testar **[clique aqui]()**
+Caso você queira ver alguns exemplos de JSON para testar **[clique aqui](https://github.com/thiago514/Teste-Tecnico-Back-End---Attornatus/blob/main/Analise_de_requisitos/AnaliseDeRequisitos/Comandos%20e%20formatos%20JSON%20para%20a%20API.md)**
 ## 🛠️ Construído com
 
 
