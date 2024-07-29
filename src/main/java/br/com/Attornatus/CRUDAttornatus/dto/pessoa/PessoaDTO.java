@@ -5,6 +5,8 @@ import br.com.Attornatus.CRUDAttornatus.model.pessoa.Pessoa;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.CalendarSerializer;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import org.modelmapper.ModelMapper;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -28,7 +30,6 @@ public class PessoaDTO {
     private Long pessoa_id;
 
     private String nome;
-
 
     @JsonSerialize(using = CalendarSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")

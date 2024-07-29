@@ -7,6 +7,7 @@ import br.com.Attornatus.CRUDAttornatus.service.pessoa.PessoaService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -28,6 +29,9 @@ public class PessoaController{
     @PostMapping({"", "/"})
     @Transactional
     public ResponseEntity cadastrarPessoa(@RequestBody @Valid PessoaDTO dados, UriComponentsBuilder uriBuilder) throws ParseException {
+        if(dados.getNome().split(" ").length < 2){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Nome Invalido");
+        }
         var pessoa = service.cadastrar(dados.converterParaEntidade()).converterEntidadeParaDTO();
         var uri = uriBuilder.path("/pessoa/{id}").buildAndExpand(pessoa.getPessoa_id()).toUri();
 

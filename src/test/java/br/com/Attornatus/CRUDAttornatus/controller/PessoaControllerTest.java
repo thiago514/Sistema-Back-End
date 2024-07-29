@@ -30,10 +30,7 @@ public class PessoaControllerTest {
 
     @Autowired
     private JacksonTester<PessoaDTO> pessoaDTO;
-
-    @Autowired
-    private JacksonTester<List<PessoaDTO>> listpessoaDTO;
-
+    
     @BeforeAll
     void cadastroBanco() throws Exception {
         var pessoaDTO = new PessoaDTO();
@@ -69,7 +66,7 @@ public class PessoaControllerTest {
         assertThat(response.getStatus()).isEqualTo(HttpStatus.CREATED.value());
 
         var jsonEsperado = this.pessoaDTO.write(
-                new PessoaDTO(3L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())
+                new PessoaDTO(2L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())
         ).getJson();
         assertThat(response.getContentAsString()).isEqualTo(jsonEsperado);
 
