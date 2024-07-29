@@ -14,7 +14,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -34,7 +33,7 @@ public class PessoaControllerTest {
     @BeforeAll
     void cadastroBanco() throws Exception {
         var pessoaDTO = new PessoaDTO();
-        pessoaDTO.setNome("Pedro");
+        pessoaDTO.setNome("Pedro Test");
         pessoaDTO.setData_de_nascimento(Calendar.getInstance());
         var response = mvc.perform(post("/pessoa").contentType(MediaType.APPLICATION_JSON).content(
                 this.pessoaDTO.write(pessoaDTO).getJson())).andReturn().getResponse();
@@ -59,14 +58,14 @@ public class PessoaControllerTest {
     @DisplayName("Deveria devolvar codigo http 201 (cadastrando pessoa)")
     void cadastrar_pessoa() throws Exception {
         var pessoaDTO = new PessoaDTO();
-        pessoaDTO.setNome("Pedro");
+        pessoaDTO.setNome("Pedro Test");
         pessoaDTO.setData_de_nascimento(Calendar.getInstance());
         var response = mvc.perform(post("/pessoa").contentType(MediaType.APPLICATION_JSON).content(
                 this.pessoaDTO.write(pessoaDTO).getJson())).andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(HttpStatus.CREATED.value());
 
         var jsonEsperado = this.pessoaDTO.write(
-                new PessoaDTO(2L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())
+                new PessoaDTO(2L, "Pedro Test", Calendar.getInstance(), new ArrayList<Endereco>())
         ).getJson();
         assertThat(response.getContentAsString()).isEqualTo(jsonEsperado);
 
@@ -85,7 +84,7 @@ public class PessoaControllerTest {
     @DisplayName("Deveria devolvar codigo http 400 (Alterar pessoa que não existe)")
     void alterar_pessoa_nao_existente() throws Exception {
         var response = mvc.perform(put("/pessoa").contentType(MediaType.APPLICATION_JSON).content(
-                this.pessoaDTO.write(new PessoaDTO(1L, "Pedro", Calendar.getInstance(), new ArrayList<Endereco>())).getJson()
+                this.pessoaDTO.write(new PessoaDTO(1L, "Pedro Test", Calendar.getInstance(), new ArrayList<Endereco>())).getJson()
         )).andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST.value());
     }

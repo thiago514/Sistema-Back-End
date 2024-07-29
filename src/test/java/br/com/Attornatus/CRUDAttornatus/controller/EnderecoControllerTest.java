@@ -40,7 +40,7 @@ public class EnderecoControllerTest {
     @BeforeAll
     void cadastroBanco() throws Exception {
         var pessoaDTO = new PessoaDTO();
-        pessoaDTO.setNome("Pedro");
+        pessoaDTO.setNome("Pedro Test");
         pessoaDTO.setData_de_nascimento(Calendar.getInstance());
         mvc.perform(post("/pessoa").contentType(MediaType.APPLICATION_JSON).content(this.pessoaDTO.write(pessoaDTO).getJson())).andReturn().getResponse();
         var endereco = new EnderecoDTO();
